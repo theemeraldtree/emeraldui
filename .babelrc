@@ -4,6 +4,7 @@
     "@babel/preset-react" // Needed for React
   ],
   "plugins": [
-    "@babel/plugin-transform-runtime" // Needed for Rollup babelHelper "runtime"
+    "@babel/plugin-transform-runtime", // Needed for Rollup babelHelper "runtime",
+    "@babel/plugin-proposal-class-properties"
   ]
 }
