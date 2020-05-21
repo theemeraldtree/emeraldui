@@ -19,8 +19,6 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
     "@storybook/theming": "^5.3.18",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.1.0",
     "eslint": "^7.0.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.2",
@@ -31,7 +29,6 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
-    "rollup": "^2.10.5",
     "styled-components": "^5.1.0",
     "styled-transition-group": "^2.0.1",
     "themeprovider-storybook": "^1.5.1"
@@ -55,6 +52,8 @@
     "@rollup/plugin-babel": "^5.0.2",
     "@rollup/plugin-commonjs": "^12.0.0",
     "@rollup/plugin-image": "^2.0.5",
-    "@rollup/plugin-node-resolve": "^8.0.0"
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "babel-loader": "^8.1.0",
+    "rollup": "^2.10.5"
   }
 }
