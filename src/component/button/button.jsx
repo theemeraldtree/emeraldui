@@ -4,7 +4,7 @@ import styled, { css, ThemeContext } from 'styled-components';
 import FluentHover from '../../util/fluentHover';
 
 function getColor(name, theme) {
-  if (theme && theme.button.backgroundColors[name]) return theme.button.backgroundColors[name];
+  if (theme && theme.button && theme.button.backgroundColors[name]) return theme.button.backgroundColors[name];
   return name;
 }
 
@@ -72,7 +72,7 @@ const Base = styled.button.attrs(props => ({
   }
 `;
 
-const Button = ({ children, color, dimHoverEffect, ...rest }) => {
+const Button = ({ children, color, dimHoverEffect, className, ...rest }) => {
   const ref = React.createRef();
   const theme = useContext(ThemeContext);
   const baseColor = getColor(color, theme);
@@ -80,6 +80,7 @@ const Button = ({ children, color, dimHoverEffect, ...rest }) => {
   return (
     <Base
       {...rest}
+      className={className}
       theme={theme}
       ref={ref}
       color={color}

@@ -1,6 +1,7 @@
 /* eslint-disable import/extensions */
 // Rollup is real picky about extensions
 // It won't import .jsx files, that's why it must be specified
+import { ThemeProvider as EmeraldUIThemeProvider, withTheme } from 'styled-components';
 import Button from './component/button/button.jsx';
 import TextInput from './component/textInput/textInput.jsx';
 import TextBox from './component/textBox/textBox.jsx';
@@ -12,4 +13,5 @@ import FluentHover from './util/fluentHover';
 import Detail from './component/detail/detail.jsx';
 import InputHolder from './component/inputHolder/inputHolder.jsx';
 
-export { Button, TextInput, TextBox, Detail, InputHolder, Spinner, Checkbox, Dropdown, DarkTheme, FluentHover };
+
+export { Button, TextInput, TextBox, Detail, InputHolder, Spinner, Checkbox, Dropdown, DarkTheme, FluentHover, EmeraldUIThemeProvider, withTheme };
