@@ -15,6 +15,14 @@ const DarkTheme = {
   },
   spinner: {
     color: 'white'
+  },
+  checkbox: {
+    regular: {
+      background: '#212121'
+    },
+    lighter: {
+      background: '#404040'
+    }
   }
 };
 

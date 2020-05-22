@@ -3,14 +3,17 @@
   "version": "0.1.0",
   "author": "theemeraldtree",
   "main": "dist/bundle.js",
+  "files": [
+    "dist"
+  ],
   "repository": "github:theemeraldtree/emeraldui",
   "license": "MIT",
   "homepage": "https://github.com/theemeraldtree/emeraldui",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "npx rollup -c",
-    "postinstall": "npm run build"
+    "build": "rollup -c",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.18",
@@ -31,19 +34,7 @@
     "react-is": "^16.13.1",
     "styled-components": "^5.1.0",
     "styled-transition-group": "^2.0.1",
-    "themeprovider-storybook": "^1.5.1"
-  },
-  "peerDependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "styled-components": "^5.1.0",
-    "react-transition-group": "^4.4.1",
-    "styled-transition-group": "^2.0.1"
-  },
-  "files": [
-    "dist"
-  ],
-  "dependencies": {
+    "themeprovider-storybook": "^1.5.1",
     "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.9.6",
@@ -55,5 +46,13 @@
     "@rollup/plugin-node-resolve": "^8.0.0",
     "babel-loader": "^8.1.0",
     "rollup": "^2.10.5"
-  }
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.0",
+    "react-transition-group": "^4.4.1",
+    "styled-transition-group": "^2.0.1"
+  },
+  "dependencies": {}
 }
