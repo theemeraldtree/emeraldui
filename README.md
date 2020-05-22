@@ -4,27 +4,44 @@
 
 emeraldui is a simple, clean, and easy-to-use React UI Library. It's going to be the UI library that powers [Minecraft Manager](https://github.com/theemeraldtree/minecraft-manager) and any other future projects from theemeraldtree.
 
-### Using emeraldui
+### Setting up emeraldui
 
-emeraldui is currently not on npm; you can install it directly with the git repo, however
+#### Installing:
 
 ```bash
-yarn add git://github.com/theemeraldtree/emeraldui
+yarn add @theemeraldtree/emeraldui
 ```
 
-It will compile locally, which shouldn't take too long.
-You can also upgrade it by running
+Don't forget its required peer dependencies:
 
 ```bash
-yarn upgrade emeraldui
+yarn add styled-components react-transition-group styled-transition-group
+```
+
+#### Using emeraldui:
+
+emeraldui relies on styled-components' theme system.
+It is recommended to wrap your root component with a styled-components ThemeProvider
+
+```js
+import { DarkTheme } from '@theemeraldtree/emeraldui';
+<ThemeProvider theme={DarkTheme}>
+  {/* the rest of your app goes here... */}
+</ThemeProvider>;
 ```
 
 ### Building emeraldui
 
-You can run and test emeraldui locally through its Storybook server.
+#### Run the Storybook component documentation:
 
 ```bash
 git clone https://github.com/theemeraldtree/emeraldui
 yarn
 yarn storybook
+```
+
+#### Building emeraldui:
+
+```bash
+yarn build
 ```
