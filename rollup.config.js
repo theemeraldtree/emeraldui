@@ -2,6 +2,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import image from '@rollup/plugin-image';
 import commonjs from '@rollup/plugin-commonjs';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 export default {
   input: 'src/main.js',
@@ -11,15 +12,10 @@ export default {
   },
   external: ['react'],
   plugins: [
+    peerDepsExternal(),
     resolve(),
     image(),
     commonjs({
-      namedExports: {
-        'node_modules/react-is/index.js': ['typeOf']
-      }
-      // namedExports is deprecated and supposedly handled automatically now
-      // however it doesn't work with styled-components
-      // Original namedExports usage: https://github.com/styled-components/styled-components/issues/1654
     }),
     babel({
       exclude: 'node_modules/**',
